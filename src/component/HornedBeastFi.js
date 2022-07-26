@@ -1,27 +1,33 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
 
 class HorendBeastC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0,
+      favorite: 0,
     };
   }
-  handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
+  favoriteClick = () => {
+    this.setState({ favorite: this.state.favorite + 1 });
   };
   render() {
     return (
-      <>
-        <h2>{this.props.title}</h2>
-        <img
+      <Card style={{ width: "18rem" }}>
+        <Card.Img
+          variant="top"
           src={this.props.imageUrl}
           alt={this.props.title}
-          onClick={this.handleClick}
+          onClick={this.favoriteClick}
         />
-        <p>{this.props.description}</p>
-        <span>👍 like{this.state.counter}</span>
-      </>
+        <Card.Body>
+          <Card.Title>
+            {this.props.title}👍 {this.state.favorite}
+          </Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          {/* <Button variant="primary">Go somewhere</Button> */}
+        </Card.Body>
+      </Card>
     );
   }
 }

@@ -3,6 +3,7 @@ import HorendBeastC from "./HornedBeastFi";
 import data from "./data.json";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import SelectedBeast from "./selectedBeast";
 
 class Main extends React.Component {
   render() {
@@ -11,6 +12,11 @@ class Main extends React.Component {
         {data.map((item) => (
           <Col>
             <HorendBeastC
+              title={item.title}
+              imageUrl={item.image_url}
+              description={item.description}
+            />
+            <SelectedBeast
               title={item.title}
               imageUrl={item.image_url}
               description={item.description}

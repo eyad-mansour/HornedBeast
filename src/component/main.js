@@ -11,7 +11,6 @@ class Main extends React.Component {
     super(props);
     this.state = {
       filterBeast: "0",
-      beasts: "",
     };
   }
   // fixing Edit
@@ -31,7 +30,9 @@ class Main extends React.Component {
     if (this.state.filterBeast === "0") {
       finalData = data;
     } else {
-      finalData = data.filter((card) => card.horns == this.state.filterBeast);
+      finalData = data.filter(
+        (element) => element.horns == this.state.filterBeast
+      );
     }
 
     return (
@@ -43,8 +44,8 @@ class Main extends React.Component {
               value={this.state.filterBeast}
               onChange={this.handleChange}
               id="numberOfHoren"
-              defaultValue="All"
             >
+              <option value="0">All Horen</option>
               <option value="1">1 Horen</option>
               <option value="2">2 Horen</option>
               <option value="3">3 Horen</option>
@@ -53,22 +54,22 @@ class Main extends React.Component {
           </Form.Group>
         </Form>
         <Row xs={1} md={4} className="g-4">
-          {finalData.map((card) => (
-            <Col key={card.id}>
+          {finalData.map((e, idx) => (
+            <Col key={idx}>
               <HornedBeastFi
-                imageUrl={card.image_url}
-                title={card.title}
-                description={card.description}
-                keyword={card.keyword}
-                horns={card.horns}
-                data={card}
+                imageUrl={e.image_url}
+                title={e.title}
+                description={e.description}
+                keyword={e.keyword}
+                horns={e.horns}
+                data={e}
               />
               <SelectedBeast
-                imageUrl={card.image_url}
-                title={card.title}
-                description={card.description}
-                keyword={card.keyword}
-                horns={card.horns}
+                imageUrl={e.image_url}
+                title={e.title}
+                description={e.description}
+                keyword={e.keyword}
+                horns={e.horns}
               />
             </Col>
           ))}

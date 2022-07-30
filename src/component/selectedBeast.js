@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import HorendBeastC from "./HornedBeastFi";
+
 class SelectedBeast extends React.Component {
   constructor(props) {
     super(props);

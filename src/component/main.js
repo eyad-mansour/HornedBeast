@@ -3,7 +3,7 @@ import HornedBeastFi from "./HornedBeastFi";
 import data from "./data.json";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import SelectedBeast from "./SelectedBeast.js";
+import SelectedBeast from "./selectedBeast.js";
 import { Form } from "react-bootstrap";
 
 class Main extends React.Component {

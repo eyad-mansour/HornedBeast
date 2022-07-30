@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import HorendBeastC from "./HornedBeastFi";
+
 class SelectedBeast extends React.Component {
   constructor(props) {
     super(props);
@@ -30,9 +29,9 @@ class SelectedBeast extends React.Component {
           </Modal.Body>
           <p>{this.props.description}</p>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.props.handleClose}>
+            {/* <Button variant="secondary" onClick={this.props.handleClose}>
               Close
-            </Button>
+            </Button> */}
           </Modal.Footer>
         </Modal>
       </>

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import SelectedBeast from "./selectedBeast";
+
 class HorendBeastC extends React.Component {
   constructor(props) {
     super(props);
@@ -10,15 +10,9 @@ class HorendBeastC extends React.Component {
     };
   }
 
-  openModal() {
-    this.porps((prevState) => ({ show: !prevState.show }));
-  }
-  closeModal(e) {
-    this.props({ show: false });
-  }
-
   favoriteClick = () => {
     this.setState({ favorite: this.state.favorite + 1 });
+    this.props.displayModal(this.props.data);
   };
   render() {
     return (

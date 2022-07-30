@@ -14,7 +14,8 @@ class Main extends React.Component {
       beasts: "",
     };
   }
-
+  // fixing Edit
+  // making new pull request
   handleFilterBeasts = (e) => {
     e.preventDefault();
   };

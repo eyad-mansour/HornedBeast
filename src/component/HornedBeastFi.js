@@ -6,7 +6,6 @@ class HorendBeastC extends React.Component {
     super(props);
     this.state = {
       favorite: 0,
-      clickModal: true,
     };
   }
 

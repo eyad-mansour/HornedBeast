@@ -12,11 +12,11 @@ class HorendBeastC extends React.Component {
 
   favoriteClick = () => {
     this.setState({ favorite: this.state.favorite + 1 });
-    this.props.displayModal(this.props.data);
   };
+
   render() {
     return (
-      <Card onclick={this.openModal} style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
           src={this.props.imageUrl}

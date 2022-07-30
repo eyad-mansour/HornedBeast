@@ -37,9 +37,7 @@ class Main extends React.Component {
       <>
         <Form>
           <Form.Group controlId="formGridState">
-            <Form.Label htmlFor="numberOfHoren">
-              select the horned beast you want to show
-            </Form.Label>
+            <Form.Label>select the horned beast you want to show</Form.Label>
             <Form.Select
               value={this.state.filterBeast}
               onChange={this.handleChange}
